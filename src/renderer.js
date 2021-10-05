@@ -6,7 +6,7 @@
 // process.
 
 const {ipcRenderer} = require('electron');
-
+const spawn = require('child_process').spawn
 const data_grafico_1 =
 {
     type: 'line',
@@ -77,4 +77,8 @@ setInterval( ()=>
 function exit(){
     console.log('entrei')
     ipcRenderer.send('exit')
+}
+
+function help(){
+ spawn('powershell',['Start-Process', 'https://github.com/lucaspfdr/Projeto_Aquisicao'])
 }
