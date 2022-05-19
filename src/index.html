@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/style.css">
 
   <script src="../node_modules/chart.js/dist/chart.js"></script>
@@ -14,23 +14,29 @@
 </head>
 
 <body>
-  <h1>Sistema de aquisição</h1>
-  <div class="menu">
-    <button class = "btn btn-secondary">Iniciar Aquisição</button>
-    <button class = "btn btn-secondary">Salvar Aquisição 1</button>
-    <button class = "btn btn-secondary">Salvar Aquisição 2</button>
-    <button class="btn btn-primary" onclick="help()">Help</button>
-    <button class="btn btn-primary" onclick="exit()">Sair</button>
-  </div> 
+  <h1>Sistema de Aquisição de Dados usando Interfaces Modernas</h1>
+  <h3>Sistemas Embarcados I - PUCRS</h3>
+  <h3>Daniel e Lucas</h3>
   <div class="container-fluid">
+    <button class = "btn btn-success" onclick="temp()">Iniciar Aquisição</button>
+  <br>
+  <br>
+  <br>
     <div class="row">
       <div class="col-sm-6">
+        <button class = "btn btn-secondary" onclick="saveTemp()">Salvar Aquisição Temperatura</button>
         <canvas id="plot-1" width="400" height="200"></canvas>
       </div>
       <div class="col-sm-6">
+        <button class = "btn btn-secondary">Salvar Aquisição Umidade</button>
         <canvas id="plot-2" width="400" height="200"></canvas>
       </div>
     </div>
+    
+    <button id="help-bt" class="btn btn-info" onclick="help()">Help</button>
+    <button id="exit-bt" class="btn btn-danger" onclick="exit()">Sair</button>
+
+    <p>Elaborado por Daniel & Lucas - 2022</p>
   </div>
 
   <script src="./renderer.js"></script>

@@ -9,4 +9,19 @@
 h1{
     text-align: center;
 }
+h3, p{
+    text-align: center;
+}
 
+#help-bt{
+    position: relative;
+    margin-left: 47%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#exit-bt{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
